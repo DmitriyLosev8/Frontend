@@ -1,0 +1,66 @@
+.reproduction {
+   
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35.22px;
+    color: var(--color-dark);
+  }
+  
+  &__description {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.13px;
+    color: var(--color-dark);
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+  
+  
+  
+  &__price {
+    display: block;
+  
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28.18px;
+    color: var(--color-green);
+  }
+  
+  &__button {
+    display: inline-block;
+    max-width: 310px;
+    max-height: 65px;
+    text-align: center;
+  
+    margin-top: 20px;
+    padding: 20px 60px;
+    border: 1px solid var(--color-green);
+    background-color: var(--color-light-green);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23.48px;
+    color: var(--color-green);
+    transition-duration: var(--transition-duration);
+
+    @media (max-width: 720px){
+      padding-inline: 30px;
+    }
+
+    @media (max-width: 490px){
+      padding-inline: 60px;
+    }
+
+    &:hover {
+      background-color: var(--color-green);
+      color: var(--color-light);
+    }
+    
+    &:focus {
+      background-color: var(--color-dark-green);
+    }
+  }
+}

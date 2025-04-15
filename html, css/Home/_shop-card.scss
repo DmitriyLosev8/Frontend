@@ -1,0 +1,18 @@
+.shop-card {
+  &-image {
+    display: inline-block;
+    width: 22px;
+    aspect-ratio: 1;
+    background: url("./icons/shopping-cart-base.png");
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      background: url("./icons/shopping-cart-hover.png");
+    }
+
+    &:focus {
+      background: url("./icons/shopping-cart-focus.png");
+      background-color: var(--color-light-green);
+    }
+  }
+}

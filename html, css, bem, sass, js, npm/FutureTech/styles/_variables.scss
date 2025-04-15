@@ -1,0 +1,40 @@
+ @use 'helpers' as *;
+ 
+ 
+ :root {
+   --color-light: #FFFFFF;
+   --color-dark: #141414;
+   --color-dark-10: #1A1A1A;
+   --color-dark-15: #262626;
+   --color-dark-20: #333333;
+   --color-dark-40: #666666;
+
+   --color-grey-50: #7E7E81;
+   --color-grey-60: #98989A;
+
+   --color-accent: #FFD11A;
+   --color-red: #FF5500;
+
+   --gradient: linear-gradient(
+    45deg,
+    var(--color-dark-15) 64%,
+    var(--color-accent) 136%
+   );
+
+   --border: #{rem(1)} solid var(--color-dark-15); //чтобы функция rem заработала sass надо явно дать понять, что нам надо произвести расчёты. Помещаем всё в #{} 
+   --shadow:  0 0 0 #{rem(3)} #191919;
+
+   --font-family-base: 'Inter', sans-serif;
+   --font-family-accent: 'Kumbh Sans', sans-serif;
+
+   --container-width: #{rem(1600)};  // тут записываем максимальное значение ширины контейнера из десктопной версии || чтобы функция rem заработала sass надо явно дать понять, что нам надо произвести расчёты. Помещаем всё в #{}  
+   --container-padding-x: #{rem(16)}; // тут записываем минимальные отступы внутри контейнера по иксу в мобильной версии  || чтобы функция rem заработала sass надо явно дать понять, что нам надо произвести расчёты. Помещаем всё в #{}  
+
+   --transition-duration: 0.2s;
+
+   --100vw: calc(100vw - var(--scrollbar-width));
+
+   @include laptop {
+    --container-width: #{rem(1280)};
+   }
+ }

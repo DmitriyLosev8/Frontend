@@ -1,0 +1,31 @@
+:root {
+  --color-green: #598d66;
+  --color-light-green: #e1ede6;
+  --color-dark-green: #376b44;
+
+  --color-yellow: #eedb6d;
+  --color-light-yellow: #faeb97;
+  --color-dark-yellow: #d9b949;
+
+  --color-dark: #2c2d35;
+  --color-grey: #86928b;
+  --color-light: #f4f6f5;
+
+  --border-radius: 30px;
+
+  --font-family-base: "Raleway", sans-serif;
+
+  --button-text-height: 23.48px;
+
+  --max-width: 1440px;
+  --catalog-width: 1110px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s;
+
+  --header-height: 100px;
+
+  --adaptive-margin: clamp(30px, 4.16vw, 60px);
+
+  --border: 1 px solid #598d66;
+}

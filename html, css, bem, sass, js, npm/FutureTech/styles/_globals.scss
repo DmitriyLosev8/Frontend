@@ -1,0 +1,126 @@
+@use 'helpers' as *;
+
+
+html {
+  &.is-lock {
+    overflow: hidden; //когда будет открываться оверлэй, основной скролл страницы по вертикали будет замирать
+  }
+}
+
+body {
+  @include fluid-text (18, 14);
+  
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  letter-spacing: -0.03em;
+  color: var(--color-grey-50);
+  background-color: var(--color-dark);
+}
+
+main {
+flex-grow: 1;
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-light); 
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
+
+h1, .h1 {
+  @include fluid-text (70, 30);
+
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  @include fluid-text (58, 28);
+
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  @include fluid-text (40, 24);
+
+  line-height: 1.5;
+}
+
+h4, .h4 {
+  @include fluid-text (26, 18);
+
+  line-height: 1.5;
+}
+
+h5, .h5 {
+  @include fluid-text (24, 18);
+
+  line-height: 1.5;
+}
+
+h6, .h6 {
+  @include fluid-text (20, 16);
+
+  line-height: 1.5;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  @include hover {
+    color: var(--color-accent);
+  }
+  
+  color: inherit;
+
+  &[class] {   // у ссылок, у которых есть атрибут class отключаем нижнее подчеркивание
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed  var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,  //увеличиваем кликабельною область элемента до положенных минимальных 44 пискселей
+button {
+  &[aria-labe] {  //селектор по этому атрибуту, так как он добавляется ссылкам и кнопкам, у которых только иконка Х
+    position: relative;
+
+    &::after {
+      content: '';
+      
+      @include abs-center;
+      @include square(rem(44));
+      }
+    }
+} 
+
+
